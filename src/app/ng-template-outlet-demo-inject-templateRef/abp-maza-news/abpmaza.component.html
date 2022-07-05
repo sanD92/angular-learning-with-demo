@@ -1,0 +1,18 @@
+<!-- 
+template to render contents 
+component itself set template data no need to take it from ng template context -->
+<ng-template #abpMazaTempate let-data="data">
+    <h1 style="color: green;">ABP MAZA News</h1>
+    <ul *ngFor="let el of contents">
+        <li>
+            <a href="#">{{el.title}}</a>
+            <br>
+            <span>{{el.description}}</span>
+            <br>
+            <span>{{el.img}}</span>
+        </li>
+    </ul>
+</ng-template>
+
+<!-- take ref of template and render it using ngTemplateOutlet -->
+<app-news [contents]="contents" [template]="abpMazaTempate"></app-news>

@@ -1,0 +1,11 @@
+
+<!-- only render component and data setting done in component itslef -->
+<ng-container *ngIf="contents?.length">
+    <ng-container [ngTemplateOutlet]="template"></ng-container>
+</ng-container>
+
+
+<!-- pass data from ngTemplateOutletContext to template -->
+<!-- <ng-container *ngIf="data?.length">
+    <ng-container [ngTemplateOutlet]="template" [ngTemplateOutletContext]="{data}"></ng-container>
+</ng-container> -->

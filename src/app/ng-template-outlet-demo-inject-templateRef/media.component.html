@@ -1,0 +1,14 @@
+<h1> I am media component</h1>
+
+
+<button type="button" (click)="onMediaChange('abpNews')"> ABP News</button>
+<hr>
+<button type="button" (click)="onMediaChange('zNews')"> Z News</button>
+<hr>
+<button type="button" (click)="onMediaChange('globalNews')"> Global News</button>
+<hr>
+
+<br><br> 
+<strong> Selected Chanel : {{selectedMediaChanel}}</strong>
+
+<app-abpmaza *ngIf="selectedMediaChanel === 'abpNews'"></app-abpmaza>
